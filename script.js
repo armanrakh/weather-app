@@ -1,5 +1,7 @@
 //import axios from 'axios'
 
+const body = document.querySelector('body')
+
 const img = document.querySelector('.fas')
 const temperature = document.querySelector('.temp')
 const c = document.querySelector('.C')
@@ -40,7 +42,7 @@ btn.addEventListener('click', () => {
 
     const key = '771841669b9c0dc2837c3d991efbfa73'
     let city = textArea.value
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${key}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&units=metric&appid=${key}`;
 
     let standart = fetch(url).then(res => res.json()).then(data => data.main.temp).then(value => temperature.textContent = value)
 
@@ -100,7 +102,84 @@ btn.addEventListener('click', () => {
                 if(value == id) {
                     console.log(mas)
                     img.classList.remove(img.classList[1])
-                    img.classList.add(`fa-${mas[mas.length - 1]}`)
+                    let ma = mas[mas.length - 1]
+                    img.classList.add(`fa-${mas[ma]}`)
+
+                    fetch(url).then(res => res.json()).then(data => data.timezone).then(value => {
+                        const date = new Date()
+                        let hours = date.getUTCHours() + value / 3600
+                        console.log(hours)
+
+                        if(ma == 'sun') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/sunrise.jpg')`
+                            } else if(9 < hours && hours < 17) {
+                                body.style.backgroundImage = `url('./img/almost-cloudy-morning-day.jpg')`
+                            } else if(18 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/sunset.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/night-sky.jpg')`
+                            }
+                        }
+
+                        if(ma == 'bolt') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/thunder-morn.jpg')`
+                            } else if(9 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/thunder-night.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/thunder-night.jpg')`
+                            }
+                        }
+
+                        if(ma == 'shower' || ma == 'rain') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/rain.jpg')`
+                            } else if(9 < hours && hours < 17) {
+                                body.style.backgroundImage = `url('./img/rain-not-night.jpg')`
+                            } else if(18 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/rain-night.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/rain-night.jpg')`
+                            }
+                        }
+
+                        if(ma == 'snowflake') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/snow-morn.jpg')`
+                            } else if(9 < hours && hours < 17) {
+                                body.style.backgroundImage = `url('./img/snow-day.jpg')`
+                            } else if(18 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/snow-eve.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/snow-eve.jpg')`
+                            }
+                        }
+
+                        if(ma == 'smog') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/smog-morn.jpg')`
+                            } else if(9 < hours && hours < 16) {
+                                body.style.backgroundImage = `url('./img/smog-day.jpg')`
+                            } else if(17 < hours && hours < 19) {
+                                body.style.backgroundImage = `url('./img/smog-sunset.jpg')`
+                            } else if(20 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/smog-night.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/smog-night.jpg')`
+                            }
+                        }
+
+                        if(ma == 'tornado') {
+                            if(6 < hours && hours < 9) {
+                                body.style.backgroundImage = `url('./img/tornado-morn.jpg')`
+                            } else if(9 < hours && hours < 23) {
+                                body.style.backgroundImage = `url('./img/tornado-day.jpg')`
+                            } else {
+                                body.style.backgroundImage = `url('./img/night-sky.jpg')`
+                            }
+                        }
+                    })
                 }
             }
         }
