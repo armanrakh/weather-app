@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Погода</title>
+</head>
+<body>
+    <h1>Погода</h1>
+    <header>
+        <div class = 'main'>
+            <h2 class = 'city'>Город</h2>
+            <div class = 'weather'>
+                <i class="fas fa-sun"></i>
+                <span class = 'temp'>0</span>
+                <div class = 'change-temp'>
+                    <p class = 'C'>C</p>
+                    <p class = 'F'>F</p>
+                </div>
+            </div>
+            <h2 class="status">В основном:</h2>
+            <p class = 'updated'>Обновлено в:</p>
+        </div>
+        <div class = 'stats'>
+            <div class = 'row1'>
+                <input class="search" placeholder="Введите город">
+                <div class = 'search-btn'>Искать</div>
+            </div>
+            <div class = 'row2'>
+                <div class="visibility A">
+                    <p class="B1 B">0</p>
+                    <p class="C2">Видимость</p>
+                </div>
+                <div class="humidity A">
+                    <p class="B2 B">0</p>
+                    <p class="C2">Влажность</p>
+                </div>
+                <div class="pressure A">
+                    <p class="B3 B">0</p>
+                    <p class="C2">Давление</p>
+                </div>
+                <div class="wind A">
+                    <p class="B4 B">0</p>
+                    <p class="C2">Скорость ветра</p>
+                </div>
+            </div>
+            <div class = "row3">
+                <div class="column">
+                    <div class="s-e">
+                        <p class="time D">Утро</p>
+                        <p class="time E">Вечер</p>
+                    </div>
+                    <div class="scale">
+                        <div class = 'circle1'></div>
+                    </div>
+                    <h3 class = 'col-title'>Рассвет и закат</h3>
+                </div>
+                <div class="column">
+                    <div class="s-e">
+                        <p class="time">-50°С</p>
+                        <p class="time">0°С</p>
+                        <p class="time">+50°С</p>
+                    </div>
+                    <div class="scale">
+                        <div class = 'circle2'></div>
+                    </div>
+                    <h3 class="col-title">Погода</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2 class = 'daily-sb'>Погода на неделю</h2>
+    <div class = 'daily'>
+        <div class="d1 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Сегодня</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d2 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Завтра</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d3 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Послезавтра</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d4 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Через 3 дней</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d5 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Через 4 дней</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d6 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Через 5 дней</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+        <div class="d7 G">
+            <div class = 'daily1'>
+                <h3 class="daily-title">Через 6 дней</h3>
+                <i class = 'fas'></i>
+            </div>
+            <div class = 'daily-temp'>
+                <p class="daily-max">0</p>
+                <p class="daily-min">0</p>
+            </div>
+            <p class="daily-weather">Погода</p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

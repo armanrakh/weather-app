@@ -1,0 +1,488 @@
+@font-face {
+  font-family: Futura-PT;
+  src: url("./fonts/Futura PT.ttf");
+}
+
+@font-face {
+  font-family: Caviar;
+  src: url("./fonts/caviar-dreams.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #8aafff, #3636ff);
+  background-image: url("./img/rain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 80px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  width: 400px;
+  border-radius: 80px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: rgba(255, 255, 255, 0.3);
+  margin-left: 70px;
+}
+
+h2 {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 70px;
+  -webkit-animation: start 2s;
+          animation: start 2s;
+}
+
+@-webkit-keyframes start {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes start {
+  0% {
+    opacity: 0%;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  -webkit-animation: start 2.4s;
+          animation: start 2.4s;
+}
+
+.fas {
+  color: white;
+  font-size: 60px;
+  -webkit-transition: opacity 2s, -webkit-transform 1s;
+  transition: opacity 2s, -webkit-transform 1s;
+  transition: transform 1s, opacity 2s;
+  transition: transform 1s, opacity 2s, -webkit-transform 1s;
+  -webkit-animation: start 2.6s;
+          animation: start 2.6s;
+}
+
+.fa-sun:hover, .fa-snowflake:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  opacity: 75%;
+}
+
+.fa-bolt:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 50%;
+}
+
+.fa-wind:hover {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
+.fa-smog:hover {
+  opacity: 25%;
+}
+
+.fa-cloud:hover {
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+.fa-cloud-showers-heavy:hover, .fa-cloud-rain:hover {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+}
+
+.temp {
+  font-family: Futura-PT;
+  font-size: 70px;
+  color: white;
+  -webkit-animation: start 2.4s;
+          animation: start 2.4s;
+}
+
+.change-temp {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: start 2.4s;
+          animation: start 2.4s;
+}
+
+.C {
+  font-family: Futura-PT;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.F {
+  font-family: Futura-PT;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  opacity: 0.75;
+}
+
+.status {
+  font-family: Futura-PT;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  -webkit-animation: start 2.6s;
+          animation: start 2.6s;
+  word-break: break-all;
+}
+
+.updated {
+  font-family: Futura-PT;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  -webkit-animation: start 3s;
+          animation: start 3s;
+}
+
+.stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  margin-right: 70px;
+}
+
+.row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  width: 1300px;
+  height: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: start 3s;
+          animation: start 3s;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50px;
+  height: 60px;
+  width: 800px;
+  font-size: 30px;
+  font-family: Futura-PT;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: 70px;
+}
+
+.search-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  font-family: Futura-PT;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: linear-gradient(45deg, #357cff, #ff3668);
+  height: 60px;
+  width: 140px;
+  font-size: 40px;
+  color: white;
+  margin-right: 220px;
+}
+
+.search-btn:active {
+  background: linear-gradient(45deg, #1a4491, #a5183b);
+}
+
+.row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  width: 1300px;
+  height: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: start 3s;
+          animation: start 3s;
+}
+
+.A {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.B {
+  font-size: 50px;
+  font-family: Futura-PT;
+  color: white;
+  margin-top: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.C2 {
+  font-size: 20px;
+  font-family: Futura-PT;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1300px;
+  height: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: start 3.4s;
+          animation: start 3.4s;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  height: 100px;
+  width: 600px;
+}
+
+.s-e {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 560px;
+}
+
+.scale {
+  background: -webkit-gradient(linear, left top, right top, from(#357cff), to(#ff3668));
+  background: linear-gradient(90deg, #357cff, #ff3668);
+  border-radius: 50px;
+  height: 20px;
+  width: 500px;
+}
+
+.circle1, .circle2 {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.time {
+  font-size: 30px;
+  font-family: Futura-PT;
+  color: white;
+}
+
+.col-title {
+  font-size: 30px;
+  font-family: Futura-PT;
+  color: white;
+}
+
+.daily {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 1700px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.daily-sb {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 60px;
+  -webkit-animation: start 2s;
+          animation: start 2s;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 80px;
+}
+
+.G {
+  width: 180px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+}
+
+.daily-title {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.daily1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.daily-temp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+.daily-max {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 60px;
+}
+
+.daily-min {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 40px;
+  opacity: 60%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.daily-weather {
+  color: white;
+  font-family: Futura-PT;
+  font-size: 25px;
+}
+/*# sourceMappingURL=style.css.map */

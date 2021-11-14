@@ -1,0 +1,356 @@
+@font-face {
+    font-family: Futura-PT;
+    src: url('./fonts/Futura\ PT.ttf');
+}
+
+@font-face {
+    font-family: Caviar;
+    src: url('./fonts/caviar-dreams.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(138, 175, 255), rgb(54, 54, 255));
+    background-image: url('./img/rain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 80px;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    border-radius: 80px;
+    justify-content: space-around;
+    background:rgba(255, 255, 255, 0.3);
+    margin-left: 70px;
+}
+
+h2 {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 70px;
+    animation: start 2s;
+}
+
+@keyframes start {
+    0% {
+        opacity: 0%;
+        transform: translateX(-25px);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    animation: start 2.4s;
+}
+
+.fas {
+    color: white;
+    font-size: 60px;
+
+    transition: transform 1s, opacity 2s;
+    animation: start 2.6s;
+}
+
+.fa-sun:hover, .fa-snowflake:hover {
+    transform: rotate(360deg);
+    opacity: 75%;
+}
+
+.fa-bolt:hover {
+    transform: scale(1.2);
+    opacity: 50%;
+}
+
+.fa-wind:hover {
+    transform: translateX(-100px);
+}
+
+.fa-smog:hover {
+    opacity: 25%;
+}
+
+.fa-cloud:hover {
+    transform: translateY(-25px);
+}
+
+.fa-cloud-showers-heavy:hover, .fa-cloud-rain:hover {
+    transform: translateY(25px);
+}
+
+.temp {
+    font-family: Futura-PT;
+    font-size: 70px;
+    color: white;
+    animation: start 2.4s;
+}
+
+.change-temp {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: start 2.4s;
+}
+
+.C {
+    font-family: Futura-PT;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.F {
+    font-family: Futura-PT;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    opacity: 0.75;
+}
+
+.status {
+    font-family: Futura-PT;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    animation: start 2.6s;
+    word-break: break-all;
+}
+
+.updated {
+    font-family: Futura-PT;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    animation: start 3s;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+    margin-right: 70px;
+}
+
+.row1 {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    width: 1300px;
+    height: 150px;
+    justify-content: space-between;
+    animation: start 3s;
+}
+
+.search {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    width: 800px;
+    font-size: 30px;
+    font-family: Futura-PT;
+    align-self: center;
+    margin-left: 70px;
+}
+
+.search-btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    font-family: Futura-PT;
+    align-self: center;
+    background: linear-gradient(45deg, rgb(53, 124, 255), rgb(255, 54, 104));
+    height: 60px;
+    width: 140px;
+    font-size: 40px;
+    color: white;
+    margin-right: 220px;
+}
+
+.search-btn:active {
+    background: linear-gradient(45deg, rgb(26, 68, 145), rgb(165, 24, 59));
+}
+
+.row2 {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    width: 1300px;
+    height: 150px;
+    justify-content: space-between;
+    animation: start 3s;
+}
+
+.A {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.B {
+    font-size: 50px;
+    font-family: Futura-PT;
+    color: white;
+    margin-top: 30px;
+    align-self: center;
+}
+
+.C2 {
+    font-size: 20px;
+    font-family: Futura-PT;
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.row3 {
+    display: flex;
+    width: 1300px;
+    height: 100px;
+    justify-content: space-between;
+    animation: start 3.4s;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    height: 100px;
+    width: 600px;
+}
+
+.s-e {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 560px;
+}
+
+.scale {
+    background: linear-gradient(90deg, rgb(53, 124, 255), rgb(255, 54, 104));
+    border-radius: 50px;
+    height: 20px;
+    width: 500px;
+}
+
+.circle1, .circle2 {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.time {
+    font-size: 30px;
+    font-family: Futura-PT;
+    color: white;
+}
+
+.col-title {
+    font-size: 30px;
+    font-family: Futura-PT;
+    color: white;
+}
+
+.daily {
+    display: flex;
+    margin-top: 40px;
+    align-self: center;
+    width: 1700px;
+    justify-content: space-between;
+}
+
+.daily-sb {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 60px;
+    animation: start 2s;
+    align-self: center;
+    margin-top: 80px;
+}
+
+.G {
+    width: 180px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+}
+
+.daily-title {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.daily1 {
+    display: flex;
+}
+
+.daily-temp {
+    display: flex;
+    margin-left: 20px;
+}
+
+.daily-max {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 60px;
+}
+.daily-min {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 40px;
+    opacity: 60%;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.daily-weather {
+    color: white;
+    font-family: Futura-PT;
+    font-size: 25px;
+}
