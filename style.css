@@ -119,7 +119,7 @@ h2 {
           animation: start 2.4s;
 }
 
-.fas {
+.weather > .fas {
   color: white;
   font-size: 60px;
   -webkit-transition: opacity 2s, -webkit-transform 1s;
@@ -130,33 +130,33 @@ h2 {
           animation: start 2.6s;
 }
 
-.fa-sun:hover, .fa-snowflake:hover {
+.weather > .fa-sun:hover, .weather > .fa-snowflake:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   opacity: 75%;
 }
 
-.fa-bolt:hover {
+.weather > .fa-bolt:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   opacity: 50%;
 }
 
-.fa-wind:hover {
+.weather > .fa-wind:hover {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
 }
 
-.fa-smog:hover {
+.weather > .fa-smog:hover {
   opacity: 25%;
 }
 
-.fa-cloud:hover {
+.weather > .fa-cloud:hover {
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
 }
 
-.fa-cloud-showers-heavy:hover, .fa-cloud-rain:hover {
+.weather > .fa-cloud-showers-heavy:hover, .weather > .fa-cloud-rain:hover {
   -webkit-transform: translateY(25px);
           transform: translateY(25px);
 }
@@ -266,6 +266,8 @@ h2 {
   -ms-flex-item-align: center;
       align-self: center;
   margin-left: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .search-btn {
@@ -438,21 +440,29 @@ h2 {
 }
 
 .G {
-  width: 180px;
-  height: 200px;
+  width: 240px;
+  height: 150px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .daily-title {
   color: white;
   font-family: Futura-PT;
   font-size: 30px;
-  margin-top: 20px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .daily1 {
+  margin-top: 10px;
+  margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,13 +478,13 @@ h2 {
 .daily-max {
   color: white;
   font-family: Futura-PT;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .daily-min {
   color: white;
   font-family: Futura-PT;
-  font-size: 40px;
+  font-size: 30px;
   opacity: 60%;
   margin-left: 10px;
   margin-top: 20px;
@@ -484,5 +494,10 @@ h2 {
   color: white;
   font-family: Futura-PT;
   font-size: 25px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -77,7 +77,7 @@ h2 {
     animation: start 2.4s;
 }
 
-.fas {
+.weather > .fas {
     color: white;
     font-size: 60px;
 
@@ -85,29 +85,29 @@ h2 {
     animation: start 2.6s;
 }
 
-.fa-sun:hover, .fa-snowflake:hover {
+.weather > .fa-sun:hover, .weather > .fa-snowflake:hover {
     transform: rotate(360deg);
     opacity: 75%;
 }
 
-.fa-bolt:hover {
+.weather > .fa-bolt:hover {
     transform: scale(1.2);
     opacity: 50%;
 }
 
-.fa-wind:hover {
+.weather > .fa-wind:hover {
     transform: translateX(-100px);
 }
 
-.fa-smog:hover {
+.weather > .fa-smog:hover {
     opacity: 25%;
 }
 
-.fa-cloud:hover {
+.weather > .fa-cloud:hover {
     transform: translateY(-25px);
 }
 
-.fa-cloud-showers-heavy:hover, .fa-cloud-rain:hover {
+.weather > .fa-cloud-showers-heavy:hover, .weather > .fa-cloud-rain:hover {
     transform: translateY(25px);
 }
 
@@ -188,6 +188,9 @@ h2 {
     font-family: Futura-PT;
     align-self: center;
     margin-left: 70px;
+
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .search-btn {
@@ -312,21 +315,24 @@ h2 {
 }
 
 .G {
-    width: 180px;
-    height: 200px;
+    width: 240px;
+    height: 150px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .daily-title {
     color: white;
     font-family: Futura-PT;
     font-size: 30px;
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .daily1 {
+    margin-top: 10px;
+    margin-left: 20px;
     display: flex;
 }
 
@@ -338,12 +344,12 @@ h2 {
 .daily-max {
     color: white;
     font-family: Futura-PT;
-    font-size: 60px;
+    font-size: 50px;
 }
 .daily-min {
     color: white;
     font-family: Futura-PT;
-    font-size: 40px;
+    font-size: 30px;
     opacity: 60%;
     margin-left: 10px;
     margin-top: 20px;
@@ -353,4 +359,6 @@ h2 {
     color: white;
     font-family: Futura-PT;
     font-size: 25px;
+    justify-self: center;
+    align-self: center;
 }
